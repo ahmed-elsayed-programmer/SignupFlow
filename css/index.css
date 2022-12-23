@@ -136,12 +136,15 @@ main .hero {
     flex-direction: row;
     background-color: rgba(245, 247, 255, 0.85);
     justify-content: space-evenly;
-    width: 70%;
+    width: 80%;
     /* padding: 60px; */
   }
   .hero picture {
     width: 450px;
     margin: 60px;
+  }
+  .hero .content {
+    min-width: 50% ;
   }
   .hero h1 {
     font-size: 56px;
