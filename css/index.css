@@ -137,7 +137,7 @@ main .hero {
     background-color: rgba(245, 247, 255, 0.85);
     justify-content: space-evenly;
     width: 80%;
-    /* padding: 60px; */
+    padding: 60px;
   }
   .hero picture {
     width: 450px;

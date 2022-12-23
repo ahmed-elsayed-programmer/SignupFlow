@@ -1,21 +1,4 @@
 'use strict';
-// let data = {
-//   'username' : 'ahmedelsayed',
-//   'email' : 'ahmedelsayed@email.com',
-//   'password': 'ahmedAH123321' ,
-//   'password_confirmation' : 'ahmedAH123321'
-// }
-// fetch('https://goldblv.com/api/hiring/tasks/register', {
-//   method: 'POST', 
-//   headers: {
-//     'Content-Type': 'application/json',
-//   },
-//   body: JSON.stringify(data),
-// })
-// .then(response => response.json())
-// .then(data => {
-//   console.log('Success:', data);
-// })
 
 // ------------------ declarations ------------------
 let form = document.getElementById('register')
@@ -95,8 +78,34 @@ confirmPassword.addEventListener( 'change',()=>{
 
 form.addEventListener('submit' , (e)=> {
   e.preventDefault();
-  localStorage.setItem('email' , email.value);
-  location.replace('/succeed.html')
+
+let data = {
+  'username' : userName.value,
+  'email' : email.value,
+  'password': password.value ,
+  'password_confirmation' :confirmPassword.value 
+}
+
+
+fetch('https://goldblv.com/api/hiring/tasks/register', {
+  method: 'POST', 
+  headers: {
+    'Content-Type': 'application/json',
+    'Accept' : 'application/json'
+  },
+  body: JSON.stringify(data),
+})
+.then(response => response.json())
+.then( res => {
+  if(res.errors){
+    setErorr(password , res.errors.password[0])
+  }else {
+    localStorage.setItem('email' , email.value);
+    location.replace('/succeed.html')
+
+  }
+
+})
 
 })
 
