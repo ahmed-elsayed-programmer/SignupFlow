@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+  <main>
+    <div class="hero">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="images/singup_desktop.png">
+        <img src="./images/singup_mobile.png" alt="">
+      </picture>
+
+      <div class="content">
+        <h1 class="">Create Account</h1>
+        <p>Go ahead and sign up, let everyone know how awesome you are!</p>
+        <form method="get" action="succeed.html" class="forms" id="register">
+          <div class="form-control">
+            <div class="input_with_icon" for="username">
+              <input type="text" id="username" name="username" minlength="5" maxlength="15" placeholder="Username"
+                required>
+              <img src="./images/User.svg" alt="">
+            </div>
+            <small>helloworld</small>
+          </div>
+          <div class="form-control">
+            <div class="input_with_icon" for="email">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+              <img src="./images/EnvelopeSimple.svg" alt="">
+            </div>
+            <small>ok</small>
+          </div>
+          <div class="form-control">
+            <div class="input_with_icon" for="password">
+              <input type="password" id="password" name="password" minlength="8" placeholder="Password" required>
+              <img src="./images/LockKey.svg" alt="">
+            </div>
+            <small>ok</small>
+          </div>
+          <div class="form-control">
+            <div class="input_with_icon" for="confirm_password">
+              <input type="password" id="confirm_password" minlength="8" name="confirm_password"
+                placeholder="Confirm password" required>
+              <img src="./images/LockKey.svg" alt="">
+            </div>
+            <small>ok</small>
+          </div>
+          <button class="btn">Create Account</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="./javascript/index.js"></script>
+</body>
+
+</html>
