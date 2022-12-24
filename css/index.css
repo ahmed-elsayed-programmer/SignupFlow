@@ -20,7 +20,7 @@ main .hero {
   place-items: center;
   width: 100% ;
   max-height: 100%;
-  padding: 20px;
+  padding: 60px;
 }
 
 .hero::before{
@@ -85,7 +85,7 @@ main .hero {
     background-color: rgba(245, 247, 255, 0.85);
     max-width: 90%;
     max-height: 95%;
-    padding: 20px 60px;
+    padding: 60px 20px;
   }
   .content {
     gap : 1rem
