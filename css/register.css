@@ -1,3 +1,6 @@
+main .hero {
+  padding: 0;
+}
 
 .forms{
   display: grid;
