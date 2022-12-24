@@ -3,21 +3,22 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Mulish', sans-serif;
+  /* border: 2px solid #34991585; */
 }
 
+img {
+ max-height: 100%;
+ max-width: 100%;
+}
 
 main {
-  min-height: 100%;
+  height: 100%;
 }
 
 main .hero {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   width: 100% ;
-  height: auto;
   padding: 20px;
 }
 
@@ -29,7 +30,7 @@ main .hero {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background-image: url('../images/bg_mobile.png'); /*Put your image url*/
+  background-image: url('../images/bg_mobile.png'); 
   background-size: cover;
   background-position: center;
   opacity: 0.60; /*Value from 0.0 to 1.0*/
@@ -41,21 +42,21 @@ main .hero {
 .content {
   margin: 40px 30px;
   text-align: center;
-  display: flex;
-  row-gap: 30px;
+  display: grid;
+  gap: 2rem;
   flex-direction: column;
   align-items: center;
 }
 
 .content h1{
   font-weight: 600;
-  font-size: 42px;
+  font-size: 2.5rem;
   color: #2d2d2d;
 }
 
 .content p {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   color: #1f1249;
 }
 
@@ -64,7 +65,7 @@ main .hero {
   background: linear-gradient(113.87deg, #2663DF 14.81%, #758FF0 88.76%);;
   color:rgba(255, 255, 255, 1);
   font-weight: 700;
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
   text-align: center;
   width: 100%;
@@ -83,7 +84,7 @@ main .hero {
 }
 
 .forms .input_with_icon{
-  height: 60px;
+  height: 4rem;
   margin-top: 10px;
   width: 100%;
   position: relative;
@@ -94,7 +95,7 @@ main .hero {
   display: block;
   width: 100%;
   padding: 5px;
-  font-size: 16px;
+  font-size: 1rem;
   color: red;
   opacity: 0;
   text-align: start;
@@ -108,7 +109,7 @@ main .hero {
   width: 100%;
   height: 100%;
   outline: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   padding-left: 50px;
   border-radius: 10px;
@@ -119,7 +120,7 @@ main .hero {
 .input_with_icon img {
   position: absolute;
   top: 50%;
-  left: 15px;
+  left: 1rem;
   transform: translateY(-50%);
   padding: 4px;
   border-right: 2px solid rgba(219, 227, 255, 1)  ;
@@ -128,28 +129,20 @@ main .hero {
 
 @media screen and (min-width: 1024px) {
   main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
   }
   main .hero{
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
     background-color: rgba(245, 247, 255, 0.85);
-    justify-content: space-evenly;
     width: 80%;
-    padding: 60px;
+    padding: 20px 60px;
   }
-  .hero picture {
-    width: 450px;
-    margin: 60px;
-  }
-  .hero .content {
-    min-width: 50% ;
-  }
+ 
   .hero h1 {
-    font-size: 56px;
+    font-size: 3.5rem;
     }
-    .hero p {
-      font-size: 24px;
-    }
+  .hero p {
+    font-size: 1.5rem;
+  }
 }
